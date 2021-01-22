@@ -1,4 +1,4 @@
-{% set name = "codeguru_profiler_agent" %}
+{% set name = "codeguru-profiler-agent" %}
 {% set version = "1.0.1" %}
 
 
@@ -11,7 +11,7 @@ source:
   sha256: 7e72de5c1cb28709b3cc34a80fdf061134d3b47f94e02f1f2e883e07123b8c7f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
