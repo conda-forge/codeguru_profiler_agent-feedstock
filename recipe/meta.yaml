@@ -1,5 +1,5 @@
 {% set name = "codeguru_profiler_agent" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e72de5c1cb28709b3cc34a80fdf061134d3b47f94e02f1f2e883e07123b8c7f
+  sha256: cb4181a815dd57bca600711dec2cc689bc9a59426ca127b5f8ea96c88bac856f
 
 build:
   number: 0
