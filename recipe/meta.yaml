@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cb4181a815dd57bca600711dec2cc689bc9a59426ca127b5f8ea96c88bac856f
+  url: https://github.com/aws/amazon-codeguru-profiler-python-agent/archive/v{{ version }}.tar.gz
+  sha256: 8381b552e869d261ea4a9e88e5f2db853e1d67546cd88f2e6d3774b62053d713
 
 build:
   number: 0
