@@ -36,7 +36,9 @@ about:
   home: https://docs.aws.amazon.com/codeguru/latest/profiler-ug/what-is-codeguru-profiler.html
   summary: The Python agent to be used for Amazon CodeGuru Profiler
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   doc_url: https://docs.aws.amazon.com/codeguru/latest/profiler-ug/what-is-codeguru-profiler.html
   dev_url: https://github.com/aws/amazon-codeguru-profiler-python-agent
 
