@@ -29,8 +29,15 @@ test:
     - codeguru_profiler_agent.agent_metadata
   commands:
     - pip check
+    - pytest --ignore=test/integration/
   requires:
+    - httpretty
+    - mock
     - pip
+    - pympler
+    - pytest
+  source_files:
+    - test
 
 about:
   home: https://docs.aws.amazon.com/codeguru/latest/profiler-ug/what-is-codeguru-profiler.html
