@@ -30,6 +30,8 @@ test:
   commands:
     - pip check
     - pytest --ignore=test/integration/
+    # Skipped due to required credentials
+    # See https://github.com/aws/amazon-codeguru-profiler-python-agent/tree/main/test/integration
   requires:
     - httpretty
     - mock
