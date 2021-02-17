@@ -1,5 +1,5 @@
 {% set name = "codeguru_profiler_agent" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e72de5c1cb28709b3cc34a80fdf061134d3b47f94e02f1f2e883e07123b8c7f
+  url: https://github.com/aws/amazon-codeguru-profiler-python-agent/archive/v{{ version }}.tar.gz
+  sha256: 8381b552e869d261ea4a9e88e5f2db853e1d67546cd88f2e6d3774b62053d713
 
 build:
   number: 0
@@ -29,14 +29,25 @@ test:
     - codeguru_profiler_agent.agent_metadata
   commands:
     - pip check
+    - pytest --ignore=test/integration/
+    # Skipped due to required credentials
+    # See https://github.com/aws/amazon-codeguru-profiler-python-agent/tree/main/test/integration
   requires:
+    - httpretty
+    - mock
     - pip
+    - pympler
+    - pytest
+  source_files:
+    - test
 
 about:
   home: https://docs.aws.amazon.com/codeguru/latest/profiler-ug/what-is-codeguru-profiler.html
   summary: The Python agent to be used for Amazon CodeGuru Profiler
   license: Apache-2.0
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   doc_url: https://docs.aws.amazon.com/codeguru/latest/profiler-ug/what-is-codeguru-profiler.html
   dev_url: https://github.com/aws/amazon-codeguru-profiler-python-agent
 
