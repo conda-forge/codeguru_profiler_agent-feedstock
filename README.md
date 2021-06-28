@@ -40,6 +40,7 @@ Installing `codeguru_profiler_agent` from the `conda-forge` channel can be achie
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `codeguru_profiler_agent` can be installed with:
