@@ -1,5 +1,5 @@
 {% set name = "codeguru_profiler_agent" %}
-{% set version = "1.2.2" %}
+{% set version = "1.2.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/aws/amazon-codeguru-profiler-python-agent/archive/v{{ version }}.tar.gz
-  sha256: 35403f542036b6cbe379ad5a962fc6c537fa3fdd37322fb819dab820db742f87
+  sha256: 0afadee89c51352e1390a02ff9a0b8d87cff35ebf3d58133711dc851f6398341
 
 build:
   number: 0
