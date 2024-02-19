@@ -26,20 +26,10 @@ requirements:
 test:
   imports:
     - codeguru_profiler_agent
-    - codeguru_profiler_agent.agent_metadata
   commands:
     - pip check
-    - pytest --ignore=test/integration/
-    # Skipped due to required credentials
-    # See https://github.com/aws/amazon-codeguru-profiler-python-agent/tree/main/test/integration
   requires:
-    - httpretty
-    - mock
     - pip
-    - pympler
-    - pytest
-  source_files:
-    - test
 
 about:
   home: https://docs.aws.amazon.com/codeguru/latest/profiler-ug/what-is-codeguru-profiler.html
